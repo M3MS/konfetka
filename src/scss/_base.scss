@@ -1,0 +1,18 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  min-height: 100vh;
+  //mix-blend-mode: color-burn;
+}
+
+.nice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
