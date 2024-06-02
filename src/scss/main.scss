@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "lenis";
 @import "base";
 @import "noise";
 @import "typo";
-
+@import "header";
 @import "home";

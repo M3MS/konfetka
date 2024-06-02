@@ -2,8 +2,12 @@ import * as THREE from 'three';
 import {RenderPass} from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
-import {dom, raf} from './assets/utils.js';
+import {dom, raaf} from './assets/utils.js';
 import {noise, planeFragment, planeVertex} from './assets/shaders.js';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Mouse = { x: 0, y: 0, nX: 0, nY: 0 }
 const Window = { w: window.innerWidth, h: window.innerHeight }
@@ -65,13 +69,14 @@ class Plane extends THREE.Group {
 }
 
 class Xp {
-  constructor () {
+  constructor (args) {
+    this.container = args.container
     this.scene = new THREE.Scene()
     this.camera = new THREE.PerspectiveCamera( 45, Window.w / Window.h, 1, 1000 )
     this.camera.position.z = 100
     this.renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } )
-    this.renderer.setSize( Window.w, Window.h )
-    dom.select.one( '.nice' ).appendChild( this.renderer.domElement )
+    this.renderer.setSize(this.container.offsetWidth, this.container.offsetHeight);
+    this.container.appendChild( this.renderer.domElement )
 
     this.DELTA_TIME = 0
     this.LAST_TIME = Date.now()
@@ -91,10 +96,10 @@ class Xp {
     this.plane = new Plane({couleur:0xFCB905})
     this.planeTwo = new Plane({couleur:0x0D00FF})
 
-    console.log(this.planeTwo.position)
+    this.plane.position.x = 20
 
-    this.planeTwo.position.x = -24
-    this.planeTwo.position.y = -24
+    this.planeTwo.position.x = 40
+    this.planeTwo.position.y = -10
 
     this.scene.add( this.plane )
     this.scene.add( this.planeTwo )
@@ -124,23 +129,26 @@ class Xp {
     this.renderer.render( this.scene, this.camera )
   }
   resize () {
-    const aspect = Window.w / Window.h
-    this.camera.aspect = aspect
+    this.width = this.container.offsetWidth;
+    this.height = this.container.offsetHeight;
+    this.camera.aspect = this.width/this.height;
     this.camera.updateProjectionMatrix()
     const vFov = this.camera.fov * Math.PI / 180
     const h = Math.ceil( 2 * Math.tan( vFov / 2 ) * this.camera.position.z )
-    const w = Math.ceil( h * aspect )
+    const w = Math.ceil( h * this.camera.aspect )
     this.plane.resize( w, h )
     this.planeTwo.resize( w, h )
-    this.renderer.setSize( Window.w, Window.h )
+    this.renderer.setSize( this.width, this.height )
   }
 }
 
-export default class App {
-  constructor () {
+export default class Scene {
+  constructor (options) {
+    this.container = options.domElement
+    this.xp = new Xp({container: this.container})
     this.bind()
     this.addListeners()
-    this.xp = new Xp()
+    this.anime()
   }
   bind () {
     [ 'onResize', 'onMouseMove', 'update' ]
@@ -168,7 +176,26 @@ export default class App {
   }
   update () {
     this.xp.update()
-    raf( this.update )
+    raaf( this.update )
+  }
+
+  anime() {
+    let skills = document.querySelector(".skills");
+    let bubbles = this.xp;
+
+    gsap.to(bubbles.scene.scale, {
+        x: 10,
+        y: 10,
+        ease: 'linear',
+        duration: 1.0,
+        scrollTrigger: {
+          trigger: skills,
+          start: 'top 0%',
+          end: 'bottom 110%',
+          toggleActions: 'play reverse none reverse'
+        }
+    })
+
   }
 }
 

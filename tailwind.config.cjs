@@ -6,7 +6,12 @@ module.exports = {
     theme: {
         fontFamily: {
             'sans': ['Beatrice', 'Verdana', 'sans-serif'],
-            'serif': ['Bluu\\ Next', 'Georgia', 'serif']
+            'serif': ['Arsenica', 'Georgia', 'serif']
+        },
+        container: {
+            screens: {
+                '2xl': '1700px'
+            }
         }
     }
 }

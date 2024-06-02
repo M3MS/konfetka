@@ -16,7 +16,7 @@
     "vite": "^5.0.11"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^1.0.33",
+    "@studio-freight/lenis": "^1.0.35",
     "gsap": "npm:@gsap/shockingly@^3.11.5",
     "three": "^0.160.0"
   }

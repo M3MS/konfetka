@@ -2,48 +2,66 @@
  * ------------------------------------------------ */
 @font-face {
     font-family: 'Bluu Next';
-    src: url('../fonts/BluuNext-Bold.eot');
-    src: url('../fonts/BluuNext-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/BluuNext-Bold.woff2') format('woff2'),
-        url('../fonts/BluuNext-Bold.woff') format('woff'),
-        url('../fonts/BluuNext-Bold.ttf') format('truetype'),
-        url('../fonts/BluuNext-Bold.svg#BluuNext-Bold') format('svg');
+    src: url('../assets/fonts/BluuNext-Bold.eot');
+    src: url('../assets/fonts/BluuNext-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/BluuNext-Bold.woff2') format('woff2'),
+        url('../assets/fonts/BluuNext-Bold.woff') format('woff'),
+        url('../assets/fonts/BluuNext-Bold.ttf') format('truetype'),
+        url('../assets/fonts/BluuNext-Bold.svg#BluuNext-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Bluu Next';
-    src: url('../fonts/BluuNext-BoldItalic.eot');
-    src: url('../fonts/BluuNext-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/BluuNext-BoldItalic.woff2') format('woff2'),
-        url('../fonts/BluuNext-BoldItalic.woff') format('woff'),
-        url('../fonts/BluuNext-BoldItalic.ttf') format('truetype'),
-        url('../fonts/BluuNext-BoldItalic.svg#BluuNext-BoldItalic') format('svg');
+    src: url('../assets/fonts/BluuNext-BoldItalic.eot');
+    src: url('../assets/fonts/BluuNext-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/BluuNext-BoldItalic.woff2') format('woff2'),
+        url('../assets/fonts/BluuNext-BoldItalic.woff') format('woff'),
+        url('../assets/fonts/BluuNext-BoldItalic.ttf') format('truetype'),
+        url('../assets/fonts/BluuNext-BoldItalic.svg#BluuNext-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Beatrice';
-    src: url('../fonts/Beatrice-RegularItalic.eot');
-    src: url('../fonts/Beatrice-RegularItalic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Beatrice-RegularItalic.woff2') format('woff2'),
-        url('../fonts/Beatrice-RegularItalic.woff') format('woff'),
-        url('../fonts/Beatrice-RegularItalic.ttf') format('truetype'),
-        url('../fonts/Beatrice-RegularItalic.svg#Beatrice-RegularItalic') format('svg');
+    src: url('../assets/fonts/Beatrice-RegularItalic.eot');
+    src: url('../assets/fonts/Beatrice-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Beatrice-RegularItalic.woff2') format('woff2'),
+        url('../assets/fonts/Beatrice-RegularItalic.woff') format('woff'),
+        url('../assets/fonts/Beatrice-RegularItalic.ttf') format('truetype'),
+        url('../assets/fonts/Beatrice-RegularItalic.svg#Beatrice-RegularItalic') format('svg');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Beatrice';
-    src: url('../fonts/Beatrice-Regular.eot');
-    src: url('../fonts/Beatrice-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Beatrice-Regular.woff2') format('woff2'),
-        url('../fonts/Beatrice-Regular.woff') format('woff'),
-        url('../fonts/Beatrice-Regular.ttf') format('truetype'),
-        url('../fonts/Beatrice-Regular.svg#Beatrice-Regular') format('svg');
+    src: url('../assets/fonts/Beatrice-Regular.eot');
+    src: url('../assets/fonts/Beatrice-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Beatrice-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Beatrice-Regular.woff') format('woff'),
+        url('../assets/fonts/Beatrice-Regular.ttf') format('truetype'),
+        url('../assets/fonts/Beatrice-Regular.svg#Beatrice-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arsenica';
+    src: url('../assets/fonts/ArsenicaTrial-Bold.eot');
+    src: url('../assets/fonts/ArsenicaTrial-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/ArsenicaTrial-Bold.woff2') format('woff2'),
+        url('../assets/fonts/ArsenicaTrial-Bold.woff') format('woff'),
+        url('../assets/fonts/ArsenicaTrial-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.text-effect > div {
+    display: inline;
 }

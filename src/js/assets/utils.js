@@ -1,4 +1,4 @@
-export const raf = (function(){
+export const raaf = (function(){
   return  window.requestAnimationFrame || 
     window.webkitRequestAnimationFrame || 
     window.mozRequestAnimationFrame    || 

@@ -7,34 +7,288 @@
     <title>Konfetka</title>
   </head>
   <body class="home">
-    <main id="app">
-      <div class="nice"></div>
+    <main id="app" data-scroll-container>
+      <div class="overlay"></div>
+      <div id="nice" class="nice"></div>
       <header class="site-header fixed top-0 px-5 py-5 flex justify-center w-full">
-        <img src="./src/assets/logo-black.png" class="max-w-48 block mx-auto" alt="Konfetka">
+        <a href="/">
+          <img class="header-logo" src="./src/assets/logo-black.png" class="max-w-48 block mx-auto" alt="Konfetka">
+        </a>
       </header>
-      <section class="hero flex-wrap flex flex-col justify-center px-5">
-        <div class="heading">
-          <h1 class="font-serif text-8xl">
-            We get your needs<br> 
-            We get the market<br> 
-            Let’s skip the faff talk.
-            </h1>
+      <section class="scroll-section hero flex-wrap flex flex-col justify-center px-5 relative">
+        <h1 class="heading  mt-auto pl-5 font-serif text-5xl lg:text-9xl">
+          We get your needs<br>
+          We get the market<br>
+         Let’s skip the faff talk.
+        </h1>
+        <div class="flex justify-between mt-auto mb-16 mr-16">
+          <span class="flex mx-auto absolute bottom-0 right-5 bottom-3 max-w-64 items-center">
+            <svg class="scroll-arrow max-w-16" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="m 50.001259,1025.3621 c 0.6142,-0.016 0.9844,-0.2007 1.25,-0.4375 l 16.00004,-13 c 0.86575,-0.6141 1.00275,-2.0056 0.29974,-2.8756 -0.70301,-0.87 -2.01748,-0.9162 -2.79974,-0.2182 l -12.75004,10.3438 0,-37.81248 c 0,-1.1046 -0.8954,-2 -2,-2 -1.1046,0 -2,0.8954 -2,2 l 0,37.81248 -12.75,-10.3438 c -0.79,-0.7917 -2.1759,-0.5667 -2.9193,0.269 -0.5722,0.6434 -0.3899,2.358 0.4193,2.8248 l 16,13 c 0.4144,0.3385 0.7226,0.4416 1.25,0.4375 z" fill="#000000" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/></g></svg>
+            Scroll to discover
+          </span>
         </div>
+      </section>
+      <section class="scroll-section about flex flex-wrap flex-col px-5">
+        <p class="text-2xl lg:text-5xl leading-snug lg:whitespace-nowrap w-[80%] ml-2 lg:ml-[5vw] mt-16 p-5 text-effect" data-scroll data-scroll-speed="-1.5">
+          We are a new generation creative and communications agency,<br>
+          uniting a global network of diverse creatives <br>to help purpose driven brands to amp up their game.
+        </p>
+      </section>
+      <section class="scroll-section skills">
+        <div class="container mx-auto">
+          <div class="skills__content grid grid-cols-3">
+            <div id="what" class="col-span-1 col_left">
+                <svg version="1.1" id="shiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 147.84 151.47" style="enable-background:new 0 0 147.84 151.47;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                  </style>
+                  <g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M84.19,56.11l-0.34-0.17c-0.21-0.1-0.42-0.21-0.63-0.31l-0.35-0.16l1.58-3.2
+                          c5.36-10.83,12.71-25.65,21.99-44.93l0.68,0.33c-9.24,19.2-16.24,34.15-21.35,45.07L84.19,56.11z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M88.3,58.88L88,58.63c-0.14-0.12-0.29-0.23-0.43-0.34l-0.41-0.32l0.25-0.3
+                          c5.79-6.99,12.83-15.52,21.08-25.87l0.59,0.47c-8.27,10.37-15.02,19.12-20.53,26.31L88.3,58.88z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M74.66,53.6l-0.74-0.02l-0.74,0.02l0.04-3.59C73.36,37.93,73.54,21.39,73.54,0h0.75
+                          c0,21.39,0.19,37.93,0.32,50.01L74.66,53.6z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M68.28,54.31l-0.08-0.38c-1.85-8.87-4.13-19.67-7.08-32.61c0,0,0,0,0,0l0.73-0.17
+                          c0.01,0.02,0.01,0.05,0.02,0.07c2.94,12.89,5.57,23.6,7.75,32.38l0.09,0.38l-0.38,0.08c-0.22,0.05-0.45,0.1-0.67,0.15
+                          L68.28,54.31z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M79.56,54.31l-0.38-0.09c-0.22-0.05-0.45-0.11-0.67-0.15l-0.38-0.08l0.09-0.38
+                          c2.18-8.78,4.81-19.51,7.77-32.45l0.73,0.17c0,0.02-0.01,0.03-0.01,0.04c-2.96,12.99-5.24,23.75-7.07,32.57L79.56,54.31z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M63.65,56.11l-1.53-3.27C57.01,41.92,50.03,27,40.8,7.82c-0.02-0.05-0.05-0.1-0.07-0.15l0.68-0.33
+                          c9.25,19.2,16.58,34,21.93,44.8l1.65,3.33l-0.35,0.16c-0.21,0.1-0.42,0.2-0.63,0.31L63.65,56.11z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M91.69,62.51l-0.31-0.4c-0.12-0.15-0.24-0.3-0.36-0.45l-0.25-0.3l2.94-2.29
+                          c9.51-7.41,22.53-17.56,39.19-30.84l0.47,0.59c-16.7,13.32-29.51,23.77-38.86,31.4L91.69,62.51z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M95.67,71.53l-0.08-0.38c-0.05-0.23-0.1-0.46-0.16-0.68l-0.09-0.37l3.6-0.78
+                          c11.79-2.55,27.94-6.05,48.73-10.79l0.17,0.73c-20.81,4.75-36.89,8.61-48.62,11.43L95.67,71.53z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M94.18,66.79l-0.16-0.35c-0.1-0.21-0.2-0.41-0.3-0.62l-0.17-0.35l0.35-0.16
+                          c8.22-3.77,18.23-8.39,30.22-14.16l0.33,0.68c-11.95,5.76-21.83,10.71-29.91,14.79L94.18,66.79z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M51.78,76.47l-0.39-0.01c-9.05-0.17-20.09-0.35-33.38-0.35v-0.75c13.29,0,24.33-0.18,33.38-0.35L51.78,75
+                          l-0.02,0.73L51.78,76.47z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M53.65,66.79l-0.35-0.18c-8.05-4.07-17.89-9-29.82-14.75c-0.03-0.02-0.06-0.03-0.09-0.05c0,0,0,0,0,0
+                          l0.33-0.68c11.98,5.77,22,10.4,30.22,14.16l0.35,0.16l-0.17,0.35c-0.1,0.21-0.2,0.41-0.3,0.62L53.65,66.79z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M96.05,76.47l0.02-0.73L96.05,75l0.39,0.01c9.05,0.17,20.09,0.35,33.38,0.35v0.75
+                          c-13.29,0-24.33,0.18-33.38,0.35L96.05,76.47z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M23.72,100.33C23.72,100.33,23.72,100.33,23.72,100.33l-0.33-0.68c11.99-5.77,21.85-10.72,29.91-14.79
+                          l0.35-0.17l0.16,0.35c0.1,0.21,0.2,0.41,0.3,0.62L54.29,86l-0.35,0.16c-8.17,3.74-18.14,8.35-30.15,14.13
+                          C23.76,100.31,23.74,100.32,23.72,100.33z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M124.12,100.33c-12.04-5.8-22.03-10.41-30.22-14.16L93.55,86l0.17-0.35c0.1-0.21,0.2-0.41,0.3-0.62
+                          l0.16-0.35l0.35,0.17c8.07,4.08,17.94,9.03,29.91,14.79L124.12,100.33z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M85.99,130.31c-2.95-12.93-5.58-23.66-7.77-32.45l-0.09-0.38l0.38-0.08c0.22-0.05,0.45-0.1,0.67-0.15
+                          l0.38-0.09l0.08,0.38c1.83,8.82,4.11,19.58,7.07,32.57c0,0.01,0.01,0.03,0.01,0.04c0,0,0,0,0,0L85.99,130.31z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M61.85,130.31l-0.73-0.17c2.95-12.94,5.24-23.75,7.08-32.61l0.08-0.38l0.38,0.09
+                          c0.22,0.05,0.44,0.11,0.67,0.15l0.38,0.08l-0.09,0.38c-2.18,8.79-4.81,19.5-7.75,32.38C61.86,130.27,61.85,130.29,61.85,130.31z"
+                          />
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M106.44,144.13c-9.31-19.33-16.67-34.18-22.04-45.03L82.86,96l0.35-0.16c0.21-0.1,0.42-0.2,0.63-0.31
+                          l0.34-0.17l1.56,3.32c5.11,10.91,12.09,25.85,21.33,45.03c0.01,0.03,0.03,0.06,0.04,0.09c0,0,0,0,0,0L106.44,144.13z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M74.29,151.47h-0.75c0-21.39-0.19-37.93-0.32-50.01l-0.04-3.58l0.74,0.01l0.74-0.01l-0.04,3.58
+                          C74.48,113.53,74.29,130.08,74.29,151.47z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M108.48,119.67c-8.27-10.37-15.3-18.9-21.08-25.87l-0.25-0.3l0.39-0.3c0.16-0.12,0.31-0.24,0.46-0.36
+                          l0.3-0.25l0.24,0.31c5.5,7.18,12.24,15.9,20.48,26.24c0.02,0.02,0.03,0.04,0.05,0.06c0,0,0,0,0,0L108.48,119.67z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M147.67,92.95c-20.75-4.74-36.88-8.23-48.66-10.78l-3.67-0.79l0.09-0.37c0.05-0.23,0.11-0.45,0.16-0.68
+                          l0.08-0.38l3.43,0.82c11.76,2.82,27.86,6.69,48.74,11.46L147.67,92.95z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M132.9,123.25c-0.02-0.01-0.04-0.03-0.06-0.04c-16.66-13.28-29.67-23.43-39.18-30.84l-2.89-2.25l0.25-0.3
+                          c0.13-0.16,0.25-0.32,0.38-0.48l0.29-0.38l2.99,2.44c9.32,7.61,22.09,18.03,38.69,31.26c0,0,0,0,0,0L132.9,123.25z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M0.17,92.95L0,92.22c20.89-4.77,36.99-8.63,48.75-11.46l3.42-0.82l0.08,0.38c0.05,0.23,0.1,0.46,0.16,0.68
+                          l0.09,0.38l-3.69,0.8C37.03,84.73,20.91,88.22,0.17,92.95z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M52.17,71.53l-3.53-0.85C36.9,67.86,20.82,64,0,59.25l0.17-0.73c20.78,4.74,36.93,8.24,48.71,10.79
+                          l3.62,0.78l-0.09,0.37c-0.06,0.23-0.11,0.45-0.16,0.68L52.17,71.53z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M59.54,58.88l-0.24-0.31c-5.51-7.18-12.25-15.92-20.53-26.31c0,0,0,0,0,0l0.59-0.47
+                          c8.29,10.39,15.31,18.91,21.08,25.87l0.25,0.3l-0.43,0.34c-0.14,0.11-0.28,0.22-0.42,0.33L59.54,58.88z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M56.15,62.51l-2.78-2.27c-9.36-7.64-22.18-18.1-38.9-31.43l0.47-0.59C31.6,41.5,44.62,51.65,54.13,59.06
+                          l2.94,2.29l-0.25,0.3c-0.12,0.14-0.23,0.28-0.34,0.43L56.15,62.51z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M14.94,123.25C14.94,123.25,14.94,123.25,14.94,123.25l-0.47-0.59c16.62-13.25,29.4-23.68,38.73-31.29
+                          l2.95-2.41l0.32,0.41c0.12,0.15,0.23,0.3,0.35,0.45l0.25,0.3l-2.89,2.25C44.66,99.78,31.63,109.94,14.94,123.25z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M39.36,119.67l-0.59-0.47c8.28-10.38,15.03-19.12,20.53-26.31l0.24-0.31l0.3,0.25
+                          c0.14,0.12,0.29,0.23,0.44,0.34l0.41,0.32l-0.25,0.3C54.67,100.76,47.66,109.27,39.36,119.67z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path class="st0" d="M41.4,144.13C41.4,144.13,41.4,144.13,41.4,144.13l-0.68-0.33c9.29-19.28,16.3-34.27,21.42-45.22l1.51-3.23
+                          l0.34,0.17c0.21,0.11,0.42,0.21,0.63,0.31L64.98,96l-1.6,3.23C58.01,110.06,50.67,124.88,41.4,144.13z"/>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+                <h3 class="skills__heading font-serif text-effect" data-scroll data-scroll-speed="-0.4">What<br>We Do</h2>
+            </div>
+            <div class="col-span-2 col_right">
+              <div class="skills__item text">
+                <h3 class="text-5xl mb-5">Strategy</h3>
+                <p class="text-2xl">We view strategy as a backbone of success. Whether it is campaign or your brand strategy, social and digital or CRM strategy, we’ll build a roadmap to achieving your goals.</p>
+              </div>
+              <div class="skills__item text">
+                <h3 class="text-5xl mb-5">Strategy</h3>
+                <p class="text-2xl">We view strategy as a backbone of success. Whether it is campaign or your brand strategy, social and digital or CRM strategy, we’ll build a roadmap to achieving your goals.</p>
+              </div>
+              <div class="skills__item text">
+                <h3 class="text-5xl mb-5">Strategy</h3>
+                <p class="text-2xl">We view strategy as a backbone of success. Whether it is campaign or your brand strategy, social and digital or CRM strategy, we’ll build a roadmap to achieving your goals.</p>
+              </div>
+              <div class="skills__item text">
+                <h3 class="text-5xl mb-5">Strategy</h3>
+                <p class="text-2xl">We view strategy as a backbone of success. Whether it is campaign or your brand strategy, social and digital or CRM strategy, we’ll build a roadmap to achieving your goals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="scroll-section services relative p-[5vw]">
+        <div class="services__content w-[50vw] m-auto z-10 h-fit">
+          <h2 class="w-full uppercase italic font-sans text-center text-5xl mb-6 text-effect">
+            Make your work<br><span class="text-[10vw] font-serif">Stand Out</span>
+          </h2>
+          <p class="w-full text-center text-3xl leading-snug italic text-effect">
+            Elevating your brand's presence, whether through captivating billboard designs, 
+            dominating tube takeovers, or a complete photography style revamp, is our expertise. 
+            At our creative agency, we excel in making your brand truly stand out.
+          </p>
+          <div class="w-full mx-auto flex align-baseline justify-between invert mt-10">
+            <img class="block h-auto w-40 object-contain" src="./src/assets/bumble.png" alt="">
+            <img class="block h-auto w-40 object-contain" src="./src/assets/pernod.png" alt="">
+            <img class="block h-auto w-40 object-contain" src="./src/assets/justeat.png" alt="">
+            <img class="block h-auto w-40 object-contain" src="./src/assets/klarna.png" alt="">
+            <img class="block h-auto w-40 object-contain" src="./src/assets/microsoft.png" alt="">
+          </div>
+        </div>
+        <div class="w-100 h-[100vh] relative z-0"></div>
+        <div class="translate-images z-0 h-[100vh] mt-0  absolute left-0 right-0 top-100 bottom-0">
+          <div id="img-1" class="translate-images__item">
+            <img src="./src/assets/1.jpg" alt="" >
+          </div>
+          <div id="img-2" class="translate-images__item">
+            <img src="./src/assets/2.jpg" alt="">
+          </div>
+          <div id="img-3" class="translate-images__item">
+            <img src="./src/assets/3.jpg" alt="" >
+          </div>
+          <div id="img-4" class="translate-images__item">
+            <img src="./src/assets/4.jpg" alt="">
+          </div>
+          <div id="img-5" class="translate-images__item">
+            <img src="./src/assets/5.jpg" alt="">
+          </div>
+          <div id="img-6" class="translate-images__item">
+            <img src="./src/assets/6.jpg" alt="">
+          </div>
+          <div id="img-7" class="translate-images__item mr-[50vw]">
+            <img src="./src/assets/7.jpg" alt="">
+          </div>
         
+        </div>
       </section>
-      <section class="about">
-        <h2 class="font-serif text-8xl">About</h2>
-      </section>
-      <section class="partners">
-        <h2 class="font-serif text-8xl">Partners</h2>
-      </section>
-      <section class="contact">
-        <h2 class="font-serif text-8xl">Contact</h2>
-      </section>
+      <section class="scroll-section contact"></section>
       <footer class="site-footer">
         
       </footer>
-    </div>
+    </main>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

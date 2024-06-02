@@ -5,14 +5,29 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
 section {
   min-height: 100vh;
-  //mix-blend-mode: color-burn;
 }
 
 .nice {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #090909;
 }
