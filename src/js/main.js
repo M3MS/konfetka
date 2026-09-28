@@ -1,5 +1,5 @@
 import '../scss/main.scss';
-import Lenis from '@studio-freight/lenis'
+import Lenis from 'lenis'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import SplitText from "gsap/dist/SplitText";
