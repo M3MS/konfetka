@@ -47,7 +47,11 @@
 	}
 
 	.services {
-		max-height: 200vh;
+
+		&__gallery {
+			height: 100vh;
+			overflow: hidden;
+		}
 
 		.translate-images {
 			display: flex;

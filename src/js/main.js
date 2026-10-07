@@ -1,8 +1,10 @@
+import '../css/tailwind.css';
+import 'lenis/dist/lenis.css'
 import '../scss/main.scss';
 import Lenis from 'lenis'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import SplitText from "gsap/dist/SplitText";
+import SplitText from "gsap/SplitText";
 import {dom, raaf} from './assets/utils.js';
 import Scene from './scene.js';
 
@@ -18,13 +20,11 @@ const lenis = new Lenis({
   smooth: true
 })
 
-function raf(time) {
-    lenis.raf(time);
-    ScrollTrigger.update();
-    requestAnimationFrame(raf);
-}
+lenis.on('scroll', ScrollTrigger.update);
 
-requestAnimationFrame(raf);
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
 
 gsap.ticker.lagSmoothing(0)
 
@@ -66,8 +66,8 @@ const skillSection = document.querySelector(".skills");
 
 const introTl = gsap.timeline({ delay: .5, paused: true });
 const scrollTl = gsap.timeline({ paused: true });
-const bigWords = new SplitText('.heading', {type: "lines, words"});
-const shadowText = new SplitText('.text-effect', {type: "words"});
+const bigWords = SplitText.create('.heading', {type: "lines, words"});
+const shadowText = SplitText.create('.text-effect', {type: "words"});
 const shadowWords = shadowText.words;
 const skillItems = gsap.utils.toArray(".skills__item");
 
@@ -152,59 +152,36 @@ gsap.to(skillSection, {
 
 function initHorizontal() {
 
-  let imagesPin = document.querySelector('.translate-images')
-  let contentPin = document.querySelector('.services__content')
+  const viewport = document.querySelector('.services__gallery')
+  const imagesPin = viewport.querySelector('.translate-images')
+  const getDistance = () => Math.max(0, imagesPin.scrollWidth - viewport.clientWidth)
 
-  gsap.to(contentPin, {
+  const containerAnimation = gsap.to(imagesPin, {
     scrollTrigger: {
-      trigger: contentPin,
-      start: 'center center',
-      end: () => "+=" + imagesPin.offsetWidth,
+      trigger: viewport,
+      start: 'top top',
+      end: () => "+=" + getDistance(),
       pin: true,
+      pinSpacing: true,
       scrub: true,
-      onLeave: () =>{ gsap.to(contentPin, { opacity: 0 } ) },
-      onEnterBack: () =>{ gsap.to([contentPin, imagesPin], { opacity: 1 } ) }
+      invalidateOnRefresh: true,
     },
-  })
-
-  let containerAnimation = gsap.to(imagesPin, {
-    scrollTrigger: {
-      trigger: imagesPin,
-      start: 'bottom bottom',
-      end: () => "+=" + imagesPin.offsetWidth,
-      pin: true,
-      pinSpacing: false,
-      scrub: true,
-      onEnter: () =>{ gsap.to(imagesPin, { opacity: 1 } ) },
-      markers: true,
-    },
-    x: () => -(imagesPin.scrollWidth - document.documentElement.clientWidth) + "px",
+    x: () => -getDistance(),
     ease: 'none'
   })
 
-  let imageWrappers = imagesPin.querySelectorAll('.translate-images__item');
-
-  imageWrappers.forEach(imageWrapper => {
-    
-    let imageWrapperID = imageWrapper.id;
-    const crawl = imageWrapper.dataset.speed * 100
-
-    gsap.to(imageWrapper, {
-      scrollTrigger: {
-        trigger: imageWrapper,
-        start: 'left center',
-        end: 'right center',
-        containerAnimation: containerAnimation,
-        toggleClass: {
-          targets: '#' + imageWrapperID,
-          className: 'active'
-        },
-        scrub: true,
-        once: false
-      },
-      x: `${-crawl}%`,
+  imagesPin.querySelectorAll('.translate-images__item').forEach(imageWrapper => {
+    ScrollTrigger.create({
+      trigger: imageWrapper,
+      start: 'left center',
+      end: 'right center',
+      containerAnimation: containerAnimation,
+      toggleClass: 'active',
     })
   })
+
+  ScrollTrigger.sort()
+  ScrollTrigger.refresh()
 }
 
 
